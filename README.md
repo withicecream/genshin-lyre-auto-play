@@ -5,7 +5,13 @@ This is not made by me, original author: [Misaka17032](https://github.com/Misaka
 I used Google translate to translate the README and piano.py.
 Also added the missing py2.convert_py2_bytes
 
-# Original README
+## Installing Dependencies
+
+`pip install -r requirements.txt`
+or
+`pip install pywin32`
+
+# Original Translated README Below
 Play the script of "The Poetry of Fengwu" according to the midi file. Driven by python.
 
 ## Operating environment
