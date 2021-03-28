@@ -1,30 +1,37 @@
 # genshin-lyre-auto-play
-根据midi文件演奏“风物之诗琴”的脚本。由python驱动。
 
-## 运行环境
+# Note
+This is not made by me, original author: [Misaka17032](https://github.com/Misaka17032)
+I used Google translate to translate the README and piano.py.
+Also added the missing py2.convert_py2_bytes
+
+# Original README
+Play the script of "The Poetry of Fengwu" according to the midi file. Driven by python.
+
+## Operating environment
 
 ```
 Windows
 python 3.x
-pywin32 （用于模拟键盘输入）
+pywin32 (used to simulate keyboard input)
 ```
 
-配置好python环境后使用pip install pywin32命令安装模块。
+After configuring the python environment, use the pip install pywin32 command to install the module.
 
-## 使用方法
+## Instructions
 
-将曲谱放入名为`songs`的文件夹，并确保midi文件中的音符在中央C和上下两个八度的白键位。
+Put the score into a folder named `songs`, and make sure that the notes in the midi file are in the center C and two octaves of white keys up and down.
 
-双击run.bat或者使用管理员权限运行`python piano.py`
+Double-click run.bat or run `python piano.py` with administrator privileges
 
-按照提示输入midi文件名（不包含后缀，即`.mid`）以及沉睡时间（即等待几秒开始播放）。
+Follow the prompts to enter the midi file name (not including the suffix, namely `.mid`) and the sleeping time (that is, wait a few seconds to start playing).
 
-请务必在开始演奏前切换回游戏内页面，并且在演奏过程中保持在游戏内。
+Be sure to switch back to the in-game page before starting to play, and stay in the game during the performance.
 
-## 声明
+## Statement
 
-转载请务必加上来源，谢谢。
+Please be sure to add the source for reprinting, thank you.
 
-多人联携模式正在开发中。
+The multi-person linkage mode is under development.
 
-可以给一个star嘛，秋梨膏~
+Can you give a star, Qiuli Gao~

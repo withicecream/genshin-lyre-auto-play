@@ -39,25 +39,25 @@ def make_map():
 		mapping[k] = s[i]
 	print(mapping)
 
-midi_file = input("Midi文件名（不含后缀）：")
+midi_file = input("Midi file name (without suffix)")
 midi_object = MidiFile("./songs/" + midi_file + ".mid")
 try:
 	midi_object = MidiFile("./songs/" + midi_file + ".mid")
 except:
-	print("文件损坏或不存在。")
+	print("The file is damaged or does not exist.")
 	quit()
 tick_accuracy = 0
-print("尝试计算播放速度......")
+print("Try to calculate the playback speed...")
 try:
 	bpm = 60000000 / midi_object.tracks[1][0].tempo
 	tick_accuracy = bpm / 20
-	print("计算成功。")
+	print("The calculation is successful.")
 except:
-	tick_accuracy = int(input("计算失败，请检查文件是否完整，或者手动输入播放速度：（7）"))
+	tick_accuracy = int(input("The calculation failed, please check whether the file is complete, or manually enter the playback speed: (7)"))
 type = ['note_on','note_off']
 tracks = []
 end_track = []
-print("开始读取音轨。")
+print("Start reading the audio track.")
 for i,track in enumerate(midi_object.tracks):
 	print(f'track{i}')
 	last_time = 0
@@ -85,11 +85,11 @@ mmax = 0
 for i in end_track:
 	mmax = max(mmax, i['time'] + 1)
 start = {}
-print("开始转换乐谱...")
+print("Start converting the score...")
 for i in range(mmax):
 	start[str(i)] = find(tracks, i)
-stime = int(input("沉睡时间（秒）："))
-print("播放将于" + str(stime) + "秒后开始，请做好准备。")
+stime = int(input("Sleep time (seconds):"))
+print("Song will start playing in " + str(stime) + " seconds, please be prepared to switch over to Genshin Impact.")
 time.sleep(stime)
 for i in range(mmax):
 	if i != 0:
@@ -98,4 +98,4 @@ for i in range(mmax):
 	for note in start[str(i)]:
 		press(str(note))
 	time.sleep(0.025)
-print("播放结束。")
+print("The playback finished.")
